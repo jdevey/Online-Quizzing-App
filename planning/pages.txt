@@ -1,0 +1,26 @@
+PAGES
+
+* HOMEPAGE - Gives the user three options: Create a game, host a game, join a
+  game
+* LOGIN PAGE - User can either log in or create an account
+* ACCOUNT CREATION PAGE - User can create an account or go back to login page
+* GAME CREATION PAGE - Creator can choose things such as time for each
+  question, title, description
+* QUESTION CREATION PAGE - Create a question's text, answers, and correct
+  answer
+* SAVED GAMES PAGE - Shows all the games a user has created in the past, and
+  gives the option to host one of them or create another
+* ENTER PIN PAGE - Players must enter a pin to join a game
+* JOIN WAITING PAGE - Simple page to wait on while others are joining and the
+  host hasn't started yet
+* HOST WAITING PAGE - Simple page for the host to wait on while players join,
+  includes "start" button
+* QUESTION ANSWERING PAGE - Host can participate but doesn't have to. Players
+  can click answers
+* QUESTION RESULTS PAGE - Host and players can see how many of each answer was
+  chosen and what the right answer was
+* GAME RESULTS PAGE - Shows results, same for both players and host
+
+NOTES
+For every single page, there should be some way to return to the homepage
+
