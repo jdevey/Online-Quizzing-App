@@ -6,7 +6,4 @@ class CustomUser(AbstractUser):
     macAddress = models.CharField(blank=True, max_length=50)
 
     def __str__(self):
-        return self.macAddress
-
-    def __str__(self):
         return self.email

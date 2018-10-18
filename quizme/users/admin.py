@@ -1,14 +1,14 @@
-from django.contrib import admin
-from django.contrib.auth import get_user_model
-from django.contrib.auth.admin import UserAdmin
+from rest_framework import serializers
+from . import models
 
-from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import CustomUser
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.CustomUser
+        fields = ('email', 'username', 'password')
 
-class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form = CustomUserChangeForm
-    model = CustomUser
-    list_display = ['email', 'username', 'name']
 
-admin.site.register(CustomUser, CustomUserAdmin)
+    def create(self, validated_data):
+        user = super(UserSerializer, self).create(validated_data)
+        user.set_password(validated_data['password'])
+        user.save()
+        return users
