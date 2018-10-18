@@ -12,7 +12,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='customuser',
-            name='macAddress',
             field=models.CharField(blank=True, max_length=50),
         ),
     ]
