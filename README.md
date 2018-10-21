@@ -23,7 +23,7 @@ cd to project root directory
 
 Instruct Virtualenv which version of python to use with the following command
 
-a. cmd: bob_ross_fan_club -p python3 virtenv
+a. cmd: venv -p python3 virtenv
 
 b. cmd: source bin/activate
 
