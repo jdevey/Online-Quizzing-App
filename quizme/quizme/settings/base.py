@@ -49,8 +49,8 @@ DJANGO_APPS = (
 
 )
 LOCAL_APPS = (
-    'users',
-    'userAuthApi',
+    'quizmeapp',
+    'API',
 )
 
 THIRD_PARTY_APPS = (
@@ -114,7 +114,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
-AUTH_USER_MODEL = 'users.CustomUser'
+#AUTH_USER_MODEL = 'users.CustomUser'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

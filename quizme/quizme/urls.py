@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('quizmeapp.urls')),
     path('admin/', admin.site.urls),
-    path('user-auth/v1/', include('userAuthApi.urls')),
+    path('api/v1/', include('API.urls')),
 ]
