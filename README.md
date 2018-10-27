@@ -30,6 +30,7 @@ b. cmd: source bin/activate
 From the project directory run the following command
 
 a. cmd: pip install -Ur local.txt
+      
       1.If running for testing or production run the corresponding .txt file
 
 b. Expected output dependencies will be installed.
