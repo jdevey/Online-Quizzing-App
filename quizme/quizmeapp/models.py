@@ -15,8 +15,6 @@ class User(models.Model):
 class Game(models.Model):
     game_title = models.CharField(max_length=30)
     pub_date = models.DateTimeField('date published')
-    question1 = models.CharField(max_length=30)
-    questions = Question
 
     def __str__(self):
         return self.game_title
