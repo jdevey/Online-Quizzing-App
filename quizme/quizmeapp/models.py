@@ -15,15 +15,17 @@ class User(models.Model):
 class Game(models.Model):
     game_title = models.CharField(max_length=30)
     pub_date = models.DateTimeField('date published')
-    questions = []
-
-    def __init__(_game_title, _pub_date, _questions):
-        game_title = _game_title
-        pub_date = _pub_date
-        questions = _questions
 
     def __str__(self):
         return self.game_title
+
+    # def __init__(_game_title, _pub_date, _questions):
+    #     game_title = _game_title
+    #     pub_date = _pub_date
+    #     questions = _questions
+
+    # def __str__(self):
+    #     return self.game_title
 
     def add_question(question):
         questions.add(question)
