@@ -62,9 +62,15 @@ THIRD_PARTY_APPS = (
     'allauth',
     'allauth.account',
     'rest_auth.registration',
+    'webpack_loader',
 )
 
-
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
