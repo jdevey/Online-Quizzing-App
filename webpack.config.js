@@ -13,7 +13,7 @@ module.exports = {
   },
 
   plugins: [
-    new BundleTracker({filename: './quizme/webpack-stats.json'}),
+    new BundleTracker({filename: './quizme/quizme/webpack-stats.json'}),
   ],
   module: {
     rules: [
