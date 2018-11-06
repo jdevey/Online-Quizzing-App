@@ -67,6 +67,9 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
+# React Node Modules
+node_modules/
+
 # Translations
 *.mo
 *.pot
