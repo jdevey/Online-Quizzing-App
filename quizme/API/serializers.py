@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from . import models
+from quizmeapp import models
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
