@@ -1,5 +1,6 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
+{% load render_bundle from webpack_loader %}
 
 {% block title %}Home{% endblock %}
 
@@ -11,5 +12,7 @@
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a> |
   <a href="{% url 'signup' %}">signup</a>
+  <div id="root"></div>
+{% render_bundle 'prochub' %}
 {% endif %}
 {% endblock %}
