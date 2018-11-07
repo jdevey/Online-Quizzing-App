@@ -14,6 +14,7 @@ class User(models.Model):
         games.append(game)
 
 class Game(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     game_title = models.CharField(max_length=30)
     pub_date = models.DateTimeField('date published')
 
@@ -32,6 +33,7 @@ class Game(models.Model):
         questions.add(question)
 
 class Question(models.Model):
+    game_parent = models.ForeignKey(Game, on_delete=models.CASCADE)
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     choices = []
@@ -48,7 +50,7 @@ class Question(models.Model):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question_parent = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
 
