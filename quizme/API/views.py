@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import User, Question
+from quizmeapp.models import User, Question
 from .serializers import UserSerializer
 
 # Create your views here.
