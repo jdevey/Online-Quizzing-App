@@ -9,6 +9,7 @@
 Icon
 
 
+
 # Thumbnails
 ._*
 
@@ -23,6 +24,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+webpack-stats.json
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
