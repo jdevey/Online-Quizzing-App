@@ -1,11 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-
-const element = (<h1>Hello, World!</h1>)
-
+export class HelloWorld extends React.Component {
+	render() {
+		return(
+			<div className="helloWorld">
+				this is a text test.
+			</div>
+		);
+	}
+}
 
 ReactDOM.render(
-	element,
+	<HelloWorld />,
   	document.getElementById('react')
 );
