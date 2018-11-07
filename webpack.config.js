@@ -5,7 +5,10 @@ var BundleTracker = require('webpack-bundle-tracker');
 module.exports = {
   context: __dirname,
 
-  entry: './quizme/quizmeapp/static/js/index',
+  entry: {
+    index: './quizme/quizmeapp/static/js/index',
+    prochub: './quizme/quizmeapp/static/js/proctor-hub',
+  },
 
   output: {
       path: path.resolve('./quizme/quizmeapp/static/bundles/'),

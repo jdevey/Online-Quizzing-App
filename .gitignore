@@ -9,6 +9,7 @@
 Icon
 
 
+
 # Thumbnails
 ._*
 
@@ -22,6 +23,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+webpack-stats.json
 
 
 ### Python ###
