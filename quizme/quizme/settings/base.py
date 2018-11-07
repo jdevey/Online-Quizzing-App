@@ -47,12 +47,12 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-
-
 )
+
 LOCAL_APPS = (
     'quizmeapp',
     'API',
+    'users',
 )
 
 THIRD_PARTY_APPS = (
@@ -71,6 +71,10 @@ WEBPACK_LOADER = {
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     }
 }
+
+AUTH_USER_MODEL = 'users.CustomUser' #Aaron
+LOGIN_REDIRECT_URL = 'home' #Aaron
+LOGOUT_REDIRECT_URL = 'home' #Aaron
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -93,7 +97,7 @@ ROOT_URLCONF = 'quizme.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], #Aaron
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -41,3 +41,12 @@ VIRTUAL ENVIORNMENT To disable the virtual environement
 To renable virtual enviornemnt
 
   a. cmd: source bin/activate
+
+GETTING JS WORKING
+
+  a. Pull down
+
+  b. rm -rf node_modules
+
+  c. npm install
+
