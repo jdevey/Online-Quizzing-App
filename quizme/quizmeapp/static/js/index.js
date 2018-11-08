@@ -36,5 +36,10 @@ class GameIDForm extends React.Component {
 
 ReactDOM.render(
 	<GameIDForm />,
-  	document.getElementById('react')
+  	document.getElementById('notauthindex')
+);
+
+ReactDOM.render(
+  <GameIDForm />,
+    document.getElementById('authindex')
 );

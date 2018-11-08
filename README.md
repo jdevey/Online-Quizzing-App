@@ -49,4 +49,7 @@ GETTING JS WORKING
   b. rm -rf node_modules
 
   c. npm install
+  
+  ./node_modules/.bin/webpack --config webpack.config.js
+
 
