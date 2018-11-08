@@ -1,15 +1,16 @@
 
 from rest_framework import serializers
-from quizmeapp import models
+from quizmeapp.models import Game
+from users.models import CustomUser
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.User
-        fields = ('owner', 'username', 'games')
+        model = CustomUser
+        fields = ('games')
 
 
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
-        model = models.Game
+        model = Game
         fields = ('owner', 'game_title', 'pub_date')
