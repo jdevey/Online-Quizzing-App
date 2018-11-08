@@ -10,13 +10,13 @@ class GameIDForm extends React.Component {
   render() {
     return (
     	<div className="quiz-creation-form">
-      	<form onSubmit={this.handleSubmit}>
-        	<label>
-          		Enter your quiz information!
-          	<input type="text" value={this.state.value} onChange={this.handleChange} />
-        	</label>
-        	<input type="submit" value="Submit your quiz" />
-      	</form>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <h2> Quiz Creation </h2> 
+            Quiz title: <input type="text" value={this.state.value} onChange={this.handleChange} /><div/><div/>
+          </label>
+          <input type="submit" value="Submit your quiz" />
+        </form>
       </div>
     );
   }
