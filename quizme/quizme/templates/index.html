@@ -11,12 +11,15 @@
 	{% if user.is_authenticated %}
   		Hi {{ user.username }}!
   		<p><a href="{% url 'logout' %}">logout</a></p>
+  		<div id="authindex"></div>
+  		{% render_bundle 'authindex' %} 
 	{% else %}
-  		<div id="root"></div>
   		<a href="{% url 'login' %}">login</a> |
   		<a href="{% url 'signup' %}">signup</a>
-  		<div id="notauthindex"></div>
- 		{% render_bundle 'index' %}
+      <div id="quizIdForm">
+  		  <div id="notauthindex"></div>
+      </div>
+ 		{% render_bundle 'nonauthindex' %} 
 	{% endif %}
 {% endblock %}
 
