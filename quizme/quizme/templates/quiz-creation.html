@@ -1,0 +1,13 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ <title>Example</title>
+ <link rel="stylesheet" href="/static/css/index-style.css">
+ </head>
+ <body>
+ <div id="quiz-creation"></div>
+ {% render_bundle 'quizcreation' %}
+ </body>
+</html>
