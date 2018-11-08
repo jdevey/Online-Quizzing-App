@@ -73,6 +73,9 @@ coverage.xml
 # React Node Modules
 node_modules/
 
+# Node Bundles
+quizme/quizmeapp/static/bundles/
+
 # Translations
 *.mo
 *.pot
