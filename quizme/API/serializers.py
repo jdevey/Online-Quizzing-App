@@ -4,10 +4,10 @@ from quizmeapp.models import Game
 from users.models import CustomUser
 
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CustomUser
-        fields = ('games')
+#class UserSerializer(serializers.ModelSerializer):
+ #   class Meta:
+  #      model = CustomUser
+   #     fields = ('games')
 
 
 class GameSerializer(serializers.ModelSerializer):

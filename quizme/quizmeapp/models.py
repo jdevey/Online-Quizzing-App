@@ -2,10 +2,12 @@ import datetime
 from django.db import models
 from django.utils import timezone
 from users.models import CustomUser
+from django.conf import settings
+
 
 
 class Game(models.Model):
-    owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     game_title = models.CharField(max_length=30)
     pub_date = models.DateTimeField('date published')
 
