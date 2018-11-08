@@ -3,6 +3,8 @@ from rest_framework import generics, permissions
 from quizmeapp.models import Game, Question
 from users.models import CustomUser
 from .serializers import GameSerializer
+from .permissions import MyUserPermissions
+
 
 # Create your views here.
 #class UserList(generics.ListAPIView):
@@ -17,10 +19,22 @@ from .serializers import GameSerializer
 
 class GameList(generics.ListCreateAPIView):
     queryset = Game.objects.all()
-    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (MyUserPermissions, permissions.IsAuthenticated,)
     serializer_class = GameSerializer
+
+    def get_queryset(self):
+        """
+        This view should return a list of all the purchases
+        for the currently authenticated user.
+        """
+        user = self.request.user
+        return Game.objects.filter(owner=user)
 
 class GameDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Game.objects.all()
-    permission_classes = (permissions.IsAuthenticated,)
+    permission_classes = (MyUserPermissions, permissions.IsAuthenticated,)
+    serializer_class = GameSerializer
+
+class GameUpdateView(generics.UpdateAPIView):
+    queryset = Game.objects.all()
     serializer_class = GameSerializer

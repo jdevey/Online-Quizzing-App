@@ -30,7 +30,7 @@ if READ_DOT_ENV_FILE:
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-ALLOWED_HOSTS = ['quizme.fun','www.quuizme.fun', '127.0.0.1']
+ALLOWED_HOSTS = ['quizme.fun','www.quuizme.fun', '127.0.0.1', '144.39.230.189']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
