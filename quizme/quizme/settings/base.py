@@ -30,6 +30,7 @@ if READ_DOT_ENV_FILE:
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
+ALLOWED_HOSTS = ['quizme.fun','www.quuizme.fun', '127.0.0.1']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -73,8 +74,8 @@ WEBPACK_LOADER = {
 }
 
 AUTH_USER_MODEL = 'users.CustomUser' #Aaron
-LOGIN_REDIRECT_URL = 'home' #Aaron
-LOGOUT_REDIRECT_URL = 'home' #Aaron
+LOGIN_REDIRECT_URL = 'index' #Aaron
+LOGOUT_REDIRECT_URL = 'index' #Aaron
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

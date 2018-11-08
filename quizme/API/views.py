@@ -1,14 +1,26 @@
 from django.shortcuts import render
+from rest_framework import generics, permissions
+from quizmeapp.models import Game, Question
+from users.models import CustomUser
+from .serializers import GameSerializer
 
 # Create your views here.
-def create_auth(request):
-    serialized = UserSerializer(data=request.DATA)
-    if serialized.is_valid():
-        User.objects.create_user(
-            serialized.init_data['email'],
-            serialized.init_data['username'],
-            serialized.init_data['password']
-        )
-        return Response(serialized.data, status=status.HTTP_201_CREATED)
-    else:
-        return Response(serialized._errors, status=status.HTTP_400_BAD_REQUEST)
+#class UserList(generics.ListAPIView):
+#    queryset = CustomUser.objects.all()
+#    permission_classes = (permissions.IsAuthenticated,)
+#    serializer_class = UserSerializer
+
+#class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+#    queryset = CustomUser.objects.all()
+#    permission_classes = (permissions.IsAuthenticated,)
+#    serializer_class = UserSerializer
+
+class GameList(generics.ListCreateAPIView):
+    queryset = Game.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = GameSerializer
+
+class GameDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Game.objects.all()
+    permission_classes = (permissions.IsAuthenticated,)
+    serializer_class = GameSerializer

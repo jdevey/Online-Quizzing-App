@@ -3,11 +3,22 @@
 <html>
  <head>
  <meta charset="UTF-8">
- <title>Example</title>
+ <title>Home</title>
  <link rel="stylesheet" href="/static/css/index-style.css">
  </head>
  <body>
- <div id="react"></div>
- {% render_bundle 'index' %}
+ {% block content %}
+	{% if user.is_authenticated %}
+  		Hi {{ user.username }}!
+  		<p><a href="{% url 'logout' %}">logout</a></p>
+	{% else %}
+  		<div id="root"></div>
+  		<a href="{% url 'login' %}">login</a> |
+  		<a href="{% url 'signup' %}">signup</a>
+  		<div id="notauthindex"></div>
+ 		{% render_bundle 'index' %}
+	{% endif %}
+{% endblock %}
+
  </body>
 </html>

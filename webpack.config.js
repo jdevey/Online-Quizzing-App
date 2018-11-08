@@ -8,7 +8,6 @@ module.exports = {
   entry: {
     index: './quizme/quizmeapp/static/js/index',
     quizcreation: './quizme/quizmeapp/static/js/quiz-creation',
-    prochub: './quizme/quizmeapp/static/js/proctor-hub',
   },
 
   output: {
