@@ -51,5 +51,7 @@ GETTING JS WORKING
   c. npm install
   
   ./node_modules/.bin/webpack --config webpack.config.js
+  
+   npm install axios --save
 
 
