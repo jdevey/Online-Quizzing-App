@@ -5,5 +5,8 @@ class CustomUser(AbstractUser):
 	#add additional fields in here
 	games = []
 
-	def __str__(self):
-		return self.email
+	def getUserName(self):
+		return self.username
+
+	# def __str__(self):
+	# 	return self.username
