@@ -35,6 +35,7 @@ class GameDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = GameSerializer
 
+
 class GameUpdateView(generics.UpdateAPIView):
     queryset = Game.objects.all()
     serializer_class = GameSerializer

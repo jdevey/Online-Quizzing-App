@@ -12,7 +12,7 @@ class Game(models.Model):
     #owner = models.CharField(default=settings.AUTH_USER_MODEL, max_length=30)
     game_title = models.CharField(max_length=30)
     game_id = models.UUIDField(default=uuid.uuid1, editable=False)
-    game_pin = models.IntegerField(primary_key=True,default=game_id, editable=False)
+    game_pin = models.IntegerField(primary_key=True, default=123123, editable=False)
     pub_date = models.DateTimeField('date published')
 
     def __str__(self):
@@ -55,5 +55,3 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
-    def add_vote():
-        votes += 1
