@@ -2,12 +2,15 @@
 {% extends 'base.html' %}
 
 {% block title %}Login{% endblock %}
+<link rel="stylesheet" href="/static/css/index-style.css">
 
 {% block content %}
+<div id='centerBlock'>
 <h2>Login</h2>
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
   <button type="submit">Login</button>
 </form>
+</div>
 {% endblock %}
