@@ -7,8 +7,9 @@ module.exports = {
 
   entry: {
     nonauthindex: './quizme/quizmeapp/static/js/nonauthindex',
-    quizcreation: './quizme/quizmeapp/static/js/quiz-creation',
     authindex: './quizme/quizmeapp/static/js/authindex',
+    quizcreation: './quizme/quizmeapp/static/js/quiz-creation',
+    questioncreation: './quizme/quizmeapp/static/js/question-creation'
   },
 
   output: {

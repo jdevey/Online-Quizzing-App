@@ -8,5 +8,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('quiz-creation', views.quizcreation, name='quiz-creation')
+    path('quiz-creation', views.quizcreation, name='quiz-creation'),
+    path('question-creation', views.questioncreation, name='question-creation')
     ]

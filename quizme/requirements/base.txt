@@ -4,3 +4,4 @@ django-allauth==0.32.0
 djangorestframework==3.8.2
 django-rest-auth==0.9.3
 django-webpack-loader
+drf-nested-routers
