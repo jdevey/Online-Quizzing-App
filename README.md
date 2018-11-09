@@ -49,9 +49,11 @@ GETTING JS WORKING
   b. rm -rf node_modules
 
   c. npm install
+
+COMMANDS YOU NEED TO KNOW
   
   ./node_modules/.bin/webpack --config webpack.config.js
   
    npm install axios --save
 
-
+   do <p/> for a newline

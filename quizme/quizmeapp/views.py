@@ -8,3 +8,6 @@ def index(request):
 
 def quizcreation(request):
 	return render(request, 'quiz-creation.html', {})
+
+def questioncreation(request):
+	return render(request, 'question-creation.html', {})
