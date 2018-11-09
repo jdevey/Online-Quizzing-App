@@ -22,7 +22,8 @@ class QCreateForm extends React.Component {
     	<div className="question-creationn-form">
         <form onSubmit={this.handleSubmit}>
           <label>
-            <h2> Question Creation </h2> 
+            <h2> Quiz Creation </h2> 
+            Quiz Title: <input type="text" value={this.state.value} onChange={this.handleChange} /><p/>
             Question text: <input type="text" value={this.state.value} onChange={this.handleChange} /><p/>
             Answer 1 text: <input type="text" id="1"/><p/>
             Answer 2 text: <input type="text" id="2"/><p/>
@@ -35,7 +36,7 @@ class QCreateForm extends React.Component {
             <input type="radio" name="correct" id="correct4" value="4" /><label>Option 4</label><p/>
           </label>
           <input type="submit" value="Add another question" /><p/>
-          <input type="submit" value="Done creating quiz" /> 
+          <input type="submit" value="Save quiz" /> 
         </form>
       </div>
     ); 

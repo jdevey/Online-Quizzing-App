@@ -7,7 +7,13 @@
  <link rel="stylesheet" href="/static/css/index-style.css">
  </head>
  <body>
- <div id="quiz-creation"></div>
- {% render_bundle 'quizcreation' %}
+ {% block content %}
+   {% if user.is_authenticated %}
+ 		<div id="question-creation"></div>
+ 		{% render_bundle 'questioncreation' %}
+ 	{% else %}
+ 		<h3>Please log in to create a quiz.</h3>
+	{% endif %}
+ {% endblock %}
  </body>
 </html>
