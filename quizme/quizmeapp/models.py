@@ -3,16 +3,25 @@ from django.db import models
 from django.utils import timezone
 from users.models import CustomUser
 from django.conf import settings
+import uuid
 
 
 
 class Game(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    #owner = models.CharField(default=settings.AUTH_USER_MODEL, max_length=30)
     game_title = models.CharField(max_length=30)
+    game_id = models.UUIDField(default=uuid.uuid1, editable=False)
+    game_pin = models.IntegerField(primary_key=True,default=game_id, editable=False)
     pub_date = models.DateTimeField('date published')
 
     def __str__(self):
-        return self.game_title
+        return self.game_id
+
+    def game_pin(self):
+        generate_pin = str(self.game_id)[:6]
+        game_pin = generate_pin
+        return 123123
 
     def add_question(question):
         questions.add(question)
@@ -22,6 +31,7 @@ class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     choices = []
+    correct_answer = models.CharField(max_length=200, default="no answers")
 
     def __init__(_question_text, _pub_date, _choices):
         question_text = _question_text
