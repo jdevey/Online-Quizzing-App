@@ -6,9 +6,9 @@ module.exports = {
   context: __dirname,
 
   entry: {
-    index: './quizme/quizmeapp/static/js/index',
+    nonauthindex: './quizme/quizmeapp/static/js/nonauthindex',
     quizcreation: './quizme/quizmeapp/static/js/quiz-creation',
-    prochub: './quizme/quizmeapp/static/js/proctor-hub',
+    authindex: './quizme/quizmeapp/static/js/authindex',
   },
 
   output: {

@@ -24,8 +24,11 @@ class GameIDForm extends React.Component {
     	<div className="gameIDForm">
       		<form onSubmit={this.handleSubmit}>
         		<label>
-          			Enter a Game ID to Play!
+          			<h2>Enter a Game ID to Play!</h2> 
+                <div/>
           		<input type="text" value={this.state.value} onChange={this.handleChange} />
+              <div/>
+              <div/>
         		</label>
         		<input type="submit" value="Submit" />
       		</form>
@@ -36,5 +39,6 @@ class GameIDForm extends React.Component {
 
 ReactDOM.render(
 	<GameIDForm />,
-  	document.getElementById('react')
+  	document.getElementById('notauthindex')
 );
+
