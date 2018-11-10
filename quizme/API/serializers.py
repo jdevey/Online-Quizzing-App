@@ -2,7 +2,6 @@
 from rest_framework import serializers
 from quizmeapp.models import Game, Question, Choice
 from users.models import CustomUser
-from drf_writable_nested import WritableNestedModelSerializer
 
 
 #class UserSerializer(serializers.ModelSerializer):
