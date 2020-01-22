@@ -1,6 +1,3 @@
-# bob-ross-fan-club
-
-
 Online quizzing app with several features:
 * Create quizzes with questions
 * Questions may have images
