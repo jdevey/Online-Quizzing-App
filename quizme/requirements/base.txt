@@ -1,7 +1,7 @@
 Django==2.1.2
 django-environ==0.4.4
 django-allauth==0.32.0
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 django-rest-auth==0.9.3
 django-webpack-loader
 drf-nested-routers
